@@ -34,7 +34,7 @@ const { stickyHeader, navigationButton } = config.settings;
 
       <ul
         id="nav-menu"
-        class="navbar hs-dropdown-menu lg:flex! lg:hs-dropdown-open:flex border-border-dark/15 flex-1 justify-center border-x max-lg:absolute max-lg:transform-none! lg:transform-none!">
+        class="navbar hs-dropdown-menu lg:hs-dropdown-open:flex border-border-dark/15 flex-1 justify-center border-x max-lg:absolute max-lg:transform-none! lg:flex! lg:transform-none!">
         {main.map((menu) => <NavMenuItem menu={menu} />)}
 
         {
@@ -89,18 +89,32 @@ const { stickyHeader, navigationButton } = config.settings;
     </nav>
 
     <script>
-      import HSDropdown from "@preline/dropdown";
+      import * as HSDropdownMod from "@preline/dropdown";
 
       if (
         [".hs-dropdown", "[data-hs-dropdown]"].some((selector) =>
           document.querySelector(selector),
         )
       ) {
-        HSDropdown?.autoInit();
+        try {
+          const candidates = [
+            HSDropdownMod?.default,
+            (HSDropdownMod as any)?.HSDropdown,
+            HSDropdownMod,
+          ];
+          const target = candidates.find(
+            (c: any) => c && typeof c.autoInit === "function",
+          );
+          target?.autoInit();
+        } catch (error) {
+          console.warn("Preline dropdown init omitido:", error);
+        }
       }
 
       function updateMegaMenuOffset(): void {
-        const header = document.querySelector("header.header") as HTMLElement | null;
+        const header = document.querySelector(
+          "header.header",
+        ) as HTMLElement | null;
         if (!header) return;
 
         const headerBottom = Math.round(header.getBoundingClientRect().bottom);

@@ -62,16 +62,21 @@
     runIdle(async () => {
       await initLucide();
 
-      // Dynamic Preline imports
-      await loadPrelineComponents();
-
       const prefersReducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
       const canHover = window.matchMedia("(hover: hover)").matches;
       const finePointer = window.matchMedia("(pointer: fine)").matches;
 
+      // Reveals first: content must appear even if a plugin fails later
       initScrollReveals(prefersReducedMotion);
+
+      // Dynamic Preline imports (guarded internally, never blocks)
+      try {
+        await loadPrelineComponents();
+      } catch (error) {
+        console.warn("Preline init omitido:", error);
+      }
 
       // Smooth Scroll - https://github.com/gblazex/smoothscroll-for-websites/wiki
       if (!prefersReducedMotion && finePointer) {
@@ -249,6 +254,11 @@
   }
 
   // Load Preline components dynamically based on DOM content
+  // Never let a plugin failure block the rest of the init (reveals, etc.)
+  function resolveAutoInit(module, named) {
+    const candidates = [module?.default, module?.[named], module];
+    return candidates.find((c) => c && typeof c.autoInit === "function");
+  }
   async function loadPrelineComponents() {
     const hasComponent = (selectors: string[]) =>
       selectors.some((selector) => document.querySelector(selector));
@@ -262,8 +272,11 @@
           () => import("@preline/select"),
         ).then((module) => {
           if (!module) return;
-          const { default: HSSelect } = module;
-          HSSelect.autoInit();
+          try {
+            resolveAutoInit(module, "HSSelect")?.autoInit();
+          } catch (error) {
+            console.warn("Preline select init omitido:", error);
+          }
         }),
       );
     }
@@ -275,8 +288,11 @@
           () => import("@preline/overlay"),
         ).then((module) => {
           if (!module) return;
-          const { default: HSOverlay } = module;
-          HSOverlay.autoInit();
+          try {
+            resolveAutoInit(module, "HSOverlay")?.autoInit();
+          } catch (error) {
+            console.warn("Preline overlay init omitido:", error);
+          }
         }),
       );
     }
