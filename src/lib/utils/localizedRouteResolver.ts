@@ -5,6 +5,7 @@ import type { CollectionKey } from "astro:content";
 import {
   getEntryRouteParam,
   getLocaleUrlCTM,
+  stripDeployBasePath,
   supportedLanguages,
 } from "./i18nUtils";
 import { slugifyyy } from "./textConverter";
@@ -16,7 +17,13 @@ const languageCodes = supportedLanguages.map(
 );
 
 const stripLocalePrefix = (pathname: string): string => {
-  const normalizedPath = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  // Drop the deploy base first: on subpath deploys Astro.url.pathname
+  // already includes it (ex: "/kernel-soluciones/en/") and it must not be
+  // treated as a content or locale segment.
+  const withoutBase = stripDeployBasePath(pathname);
+  const normalizedPath = withoutBase.startsWith("/")
+    ? withoutBase
+    : `/${withoutBase}`;
   const segments = normalizedPath.split("/").filter(Boolean);
 
   if (segments[0] && languageCodes.includes(segments[0])) {

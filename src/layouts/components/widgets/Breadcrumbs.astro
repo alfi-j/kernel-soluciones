@@ -1,5 +1,5 @@
 ---
-import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
+import { getLocaleUrlCTM, stripDeployBasePath } from "@/lib/utils/i18nUtils";
 import { humanize } from "@/lib/utils/textConverter";
 
 // Props
@@ -22,7 +22,10 @@ const {
 
 // Helper function to create breadcrumb parts
 const createBreadcrumbParts = (pathname: string) => {
-  let segments = pathname.split("/").filter((segment) => segment);
+  // Astro.url.pathname already includes the deploy base on subpath deploys
+  let segments = stripDeployBasePath(pathname)
+    .split("/")
+    .filter((segment) => segment);
 
   // Remove locale from segments
   if (segments[0] === Astro.currentLocale) {

@@ -28,6 +28,52 @@ export const getEnabledLocales = (): string[] => {
 
 export const enabledLanguages = getEnabledLocales();
 
+/**
+ * Base path of the deployed site (ex: "/kernel-soluciones" on GitHub Pages
+ * project sites). Astro sets `import.meta.env.BASE_URL` from the `--base`
+ * flag at build time ("/" in dev). Internal links must carry this prefix,
+ * otherwise they resolve against the domain root and 404 on subpath deploys.
+ */
+const getDeployBasePath = (): string => {
+  try {
+    const raw =
+      (
+        import.meta as unknown as {
+          env?: Record<string, string | undefined>;
+        }
+      )?.env?.BASE_URL ?? "/";
+    if (!raw || raw === "/") return "";
+    return raw.replace(/\/+$/, "");
+  } catch {
+    return "";
+  }
+};
+
+/**
+ * Remove the deploy base path from a raw pathname (ex: `Astro.url.pathname`
+ * already includes "/kernel-soluciones" on subpath deploys). Used before
+ * locale processing so the base is never treated as a content segment.
+ */
+export const stripDeployBasePath = (pathname: string): string => {
+  const base = getDeployBasePath();
+  if (!base) return pathname;
+  if (pathname === base) return "/";
+  if (pathname.startsWith(`${base}/`)) return pathname.slice(base.length) || "/";
+  return pathname;
+};
+
+/**
+ * Prepend the deploy base path to an internal URL, unless it is a pure
+ * anchor/query link or already carries the base.
+ */
+const withDeployBasePath = (url: string): string => {
+  const base = getDeployBasePath();
+  if (!base) return url;
+  if (url.startsWith("#") || url.startsWith("?")) return url;
+  if (url === base || url.startsWith(`${base}/`)) return url;
+  return path.posix.join(base, url);
+};
+
 export const normalizeLocaleCode = (
   providedLang: string | undefined,
 ): string => {
@@ -278,6 +324,18 @@ export const getLocaleUrlCTM = (
     }
   }
 
+  // Idempotency: some callers pass an already-localized URL (ex: Button
+  // re-localizes a `url` prop that the caller localized first). Reduce a
+  // leading deploy base + language prefix to the bare path so localizing
+  // twice is a no-op instead of doubling segments.
+  updatedUrl = stripDeployBasePath(updatedUrl);
+  for (const code of languageCodes) {
+    if (updatedUrl === `/${code}` || updatedUrl.startsWith(`/${code}/`)) {
+      updatedUrl = updatedUrl.slice(code.length + 1) || "/";
+      break;
+    }
+  }
+
   // Prepend an optional value to the URL
   if (prependValue) {
     // Ensure updatedUrl a absolute path (services/services-01 -> /services/services-01)
@@ -327,12 +385,15 @@ export const getLocaleUrlCTM = (
     getUrlWithoutLang(updatedUrl) as string,
   );
 
+  // Carry the deploy base path (GitHub Pages subpath) on internal links
+  updatedUrl = withDeployBasePath(updatedUrl);
+
   // Add trailing slash if needed
   updatedUrl = trailingSlashChecker(updatedUrl);
 
   // Reconstruct the complete URL if the original URL is absolute, meaning it includes both a protocol and a hostname.
   if (isAbsoluteUrl) {
-    updatedUrl = new URL(url).origin + updatedUrl;
+    updatedUrl = new URL(url).origin + withDeployBasePath(updatedUrl);
 
     if (hash) {
       updatedUrl = `${updatedUrl}#${hash}`;
