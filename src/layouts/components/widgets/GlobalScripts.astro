@@ -255,51 +255,21 @@
 
   // Load Preline components dynamically based on DOM content
   // Never let a plugin failure block the rest of the init (reveals, etc.)
-  function resolveAutoInit(module, named) {
-    const candidates = [module?.default, module?.[named], module];
-    return candidates.find((c) => c && typeof c.autoInit === "function");
-  }
+  // initPreline() scans every module shape for a static autoInit() instead
+  // of assuming a single export shape (CJS vs ESM resolution differs).
   async function loadPrelineComponents() {
-    const hasComponent = (selectors: string[]) =>
-      selectors.some((selector) => document.querySelector(selector));
+    const { initPreline } = await import("@/lib/utils/prelineInit").catch(
+      () => ({}) as { initPreline?: typeof import("@/lib/utils/prelineInit").initPreline },
+    );
+    if (!initPreline) return;
 
-    const tasks: Promise<void>[] = [];
-
-    if (hasComponent([".hs-select", "[data-hs-select]"])) {
-      tasks.push(
-        loadDynamicModule(
-          "@preline/select",
-          () => import("@preline/select"),
-        ).then((module) => {
-          if (!module) return;
-          try {
-            resolveAutoInit(module, "HSSelect")?.autoInit();
-          } catch (error) {
-            console.warn("Preline select init omitido:", error);
-          }
-        }),
-      );
-    }
-
-    if (hasComponent([".hs-overlay"])) {
-      tasks.push(
-        loadDynamicModule(
-          "@preline/overlay",
-          () => import("@preline/overlay"),
-        ).then((module) => {
-          if (!module) return;
-          try {
-            resolveAutoInit(module, "HSOverlay")?.autoInit();
-          } catch (error) {
-            console.warn("Preline overlay init omitido:", error);
-          }
-        }),
-      );
-    }
-
-    if (tasks.length) {
-      await Promise.all(tasks);
-    }
+    await Promise.all([
+      initPreline(
+        [".hs-select", "[data-hs-select]"],
+        () => import("@preline/select"),
+      ),
+      initPreline([".hs-overlay"], () => import("@preline/overlay")),
+    ]);
   }
 
   // Horizontal scroll with shift + wheel

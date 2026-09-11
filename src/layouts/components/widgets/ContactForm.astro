@@ -461,13 +461,16 @@ const defaultErrorMessage = messageContent.error || (isFrench
       initializing = true;
 
       try {
-        const [{ default: HSSelect }, importedFormUtils] = await Promise.all([
-          import("@preline/select"),
+        const [{ initPreline }, importedFormUtils] = await Promise.all([
+          import("@/lib/utils/prelineInit"),
           import("@/lib/utils/FormHandle"),
         ]);
 
         formUtils = importedFormUtils;
-        HSSelect.autoInit();
+        await initPreline(
+          ["[data-hs-select]"],
+          () => import("@preline/select"),
+        );
 
         let selectTags = form.querySelectorAll(
           "[input-wrapper]:not(.hidden) select[data-hs-select]",

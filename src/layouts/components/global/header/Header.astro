@@ -89,27 +89,29 @@ const { stickyHeader, navigationButton } = config.settings;
     </nav>
 
     <script>
-      import * as HSDropdownMod from "@preline/dropdown";
-
-      if (
-        [".hs-dropdown", "[data-hs-dropdown]"].some((selector) =>
-          document.querySelector(selector),
+      // initPreline() scans every module shape for a static autoInit()
+      // instead of assuming a single export shape (CJS vs ESM differs).
+      (async () => {
+        if (
+          ![".hs-dropdown", "[data-hs-dropdown]"].some((selector) => {
+            try {
+              return !!document.querySelector(selector);
+            } catch {
+              return false;
+            }
+          })
         )
-      ) {
+          return;
         try {
-          const candidates = [
-            HSDropdownMod?.default,
-            (HSDropdownMod as any)?.HSDropdown,
-            HSDropdownMod,
-          ];
-          const target = candidates.find(
-            (c: any) => c && typeof c.autoInit === "function",
+          const { initPreline } = await import("@/lib/utils/prelineInit");
+          await initPreline(
+            [".hs-dropdown", "[data-hs-dropdown]"],
+            () => import("@preline/dropdown"),
           );
-          target?.autoInit();
         } catch (error) {
           console.warn("Preline dropdown init omitido:", error);
         }
-      }
+      })();
 
       function updateMegaMenuOffset(): void {
         const header = document.querySelector(
