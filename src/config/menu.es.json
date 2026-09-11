@@ -1,0 +1,102 @@
+{
+  "main": [
+    {
+      "enable": true,
+      "name": "Inicio",
+      "weight": 0,
+      "url": "/"
+    },
+    {
+      "enable": true,
+      "name": "Servicios",
+      "weight": 1,
+      "url": "/services/"
+    },
+    {
+      "enable": true,
+      "name": "Contacto",
+      "weight": 2,
+      "url": "/#contact"
+    }
+  ],
+  "topbar": [
+    {
+      "enable": true,
+      "name": "Ayuda",
+      "url": "/#contact",
+      "weight": 0
+    },
+    {
+      "enable": true,
+      "name": "Soporte",
+      "url": "/services/soporte-tecnico/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Contacto",
+      "url": "/#contact",
+      "weight": 2
+    }
+  ],
+  "footer": [
+    {
+      "label": "Enlaces",
+      "list": [
+        {
+          "enable": true,
+          "name": "Inicio",
+          "url": "/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Servicios",
+          "url": "/services/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Contacto",
+          "url": "/#contact",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "label": "Servicios",
+      "list": [
+        {
+          "enable": true,
+          "name": "Soporte técnico",
+          "url": "/services/soporte-tecnico/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Seguridad informática",
+          "url": "/services/seguridad-informatica/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Redes y conectividad",
+          "url": "/services/redes-conectividad/",
+          "weight": 2
+        },
+        {
+          "enable": true,
+          "name": "Respaldo y recuperación",
+          "url": "/services/respaldo-recuperacion/",
+          "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "Software a medida",
+          "url": "/services/software-a-medida/",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

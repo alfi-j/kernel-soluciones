@@ -1,0 +1,102 @@
+{
+  "main": [
+    {
+      "enable": true,
+      "name": "Accueil",
+      "weight": 0,
+      "url": "/"
+    },
+    {
+      "enable": true,
+      "name": "Services",
+      "weight": 1,
+      "url": "/services/"
+    },
+    {
+      "enable": true,
+      "name": "Contact",
+      "weight": 2,
+      "url": "/#contact"
+    }
+  ],
+  "topbar": [
+    {
+      "enable": true,
+      "name": "Aide",
+      "url": "/#contact",
+      "weight": 0
+    },
+    {
+      "enable": true,
+      "name": "Support",
+      "url": "/services/support-technique/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Contact",
+      "url": "/#contact",
+      "weight": 2
+    }
+  ],
+  "footer": [
+    {
+      "label": "Liens",
+      "list": [
+        {
+          "enable": true,
+          "name": "Accueil",
+          "url": "/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Services",
+          "url": "/services/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Contact",
+          "url": "/#contact",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "list": [
+        {
+          "enable": true,
+          "name": "Support technique",
+          "url": "/services/support-technique/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Sécurité informatique",
+          "url": "/services/securite-informatique/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Réseaux",
+          "url": "/services/reseaux-connectivite/",
+          "weight": 2
+        },
+        {
+          "enable": true,
+          "name": "Sauvegarde",
+          "url": "/services/sauvegarde-recuperation/",
+          "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "Logiciels sur mesure",
+          "url": "/services/logiciels-sur-mesure/",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

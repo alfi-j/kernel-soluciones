@@ -1,0 +1,96 @@
+{
+  "common": {
+    "readMore": "Lire plus",
+    "category": "Categorie",
+    "emailPlaceholder": "Adresse e-mail",
+    "emailLabel": "E-mail",
+    "subscribeSuccess": "Abonnement reussi !",
+    "subscribeFail": "Echec de l'abonnement.",
+    "subscribeError": "Une erreur inattendue s'est produite.",
+    "bannerPattern": "Motif de banniere",
+    "customerAvatar": "Avatar client",
+    "decorativePattern": "Motif decoratif",
+    "experience": "Experience",
+    "aboutUs": "A propos de nous",
+    "experienceBadge": "Badge d'experience",
+    "paginationNext": "Suivant",
+    "paginationPrevious": "Precedent",
+    "contactDropdownSearch404": "Aucun resultat trouve",
+    "404Heading": "404 - Page introuvable",
+    "404Description": "Oups, il semble que vous ayez quitte la carte.",
+    "404ButtonLabel": "Retour a l'accueil",
+    "send": "Envoyer",
+    "share": "Partager",
+    "projectDetails": "Details du projet"
+  },
+  "navigation": {
+    "buttonLabel": "Demander un diagnostic"
+  },
+  "contactInfo": {
+    "locationLabel": "Adresse",
+    "phoneLabel": "Numero de telephone",
+    "emailLabel": "E-mail"
+  },
+  "subscription": {
+    "title": "",
+    "description": ""
+  },
+  "integration": {
+    "relatedIntegrationSectionTitle": "Vous pourriez etre **interesse par**",
+    "backToIntegration": "Parcourir"
+  },
+  "footerBlock": {
+    "description": "Kernel Soluciones offre support technique et sécurité informatique aux entreprises et particuliers en Équateur : maintenance, réseaux, sauvegarde, logiciels sur mesure et formations.",
+    "copyright": "Copyright © 2026 Kernel Soluciones. Tous droits réservés.",
+    "contactBlockLabel": "Contact",
+    "aboutUsLabel": "A propos de nous",
+    "quickLinksLabel": "Liens rapides",
+    "officeLabel": "Bureau",
+    "socialLabel": "Reseaux",
+    "recentPostsLabel": "Articles recents"
+  },
+  "blog": {
+    "comments": "Commentaires",
+    "noComments": "Aucun commentaire",
+    "previousPost": "Article precedent",
+    "nextPost": "Article suivant"
+  },
+  "button": {
+    "readMore": "Lire plus",
+    "viewProjects": "Voir les projets",
+    "view": "Voir",
+    "getAQuote": "Obtenir un devis",
+    "discoverMore": "Decouvrir davantage",
+    "findOutMore": "En savoir plus",
+    "showAll": "Tout afficher"
+  },
+  "header": {
+    "announcement": "Support à distance et sur site à Saint-Domingue et dans tout l'Équateur. [Demandez votre diagnostic](/#contact)"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "widgets": {
+    "postSearchTitle": "Recherche",
+    "postSearchFormPlaceholder": "Rechercher",
+    "categoriesTitle": "Categories",
+    "recentPostsTitle": "Articles recents"
+  },
+  "aria": {
+    "toggleNav": "Ouvrir ou fermer la navigation",
+    "backToTop": "Retour en haut",
+    "closeModal": "Fermer",
+    "playVideo": "Lire la video",
+    "search": "Rechercher",
+    "prevSlide": "Diapositive precedente",
+    "nextSlide": "Diapositive suivante",
+    "prevTestimonial": "Temoignage precedent",
+    "nextTestimonial": "Temoignage suivant",
+    "languageMenu": "Menu des langues",
+    "pagination": "Pagination",
+    "socialLinks": "Liens sociaux",
+    "aboutCompany": "A propos de l'entreprise"
+  }
+}

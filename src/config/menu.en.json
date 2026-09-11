@@ -1,0 +1,102 @@
+{
+  "main": [
+    {
+      "enable": true,
+      "name": "Home",
+      "weight": 0,
+      "url": "/"
+    },
+    {
+      "enable": true,
+      "name": "Services",
+      "weight": 1,
+      "url": "/services/"
+    },
+    {
+      "enable": true,
+      "name": "Contact",
+      "weight": 2,
+      "url": "/#contact"
+    }
+  ],
+  "topbar": [
+    {
+      "enable": true,
+      "name": "Help",
+      "url": "/#contact",
+      "weight": 0
+    },
+    {
+      "enable": true,
+      "name": "Support",
+      "url": "/services/technical-support/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Contact",
+      "url": "/#contact",
+      "weight": 2
+    }
+  ],
+  "footer": [
+    {
+      "label": "Links",
+      "list": [
+        {
+          "enable": true,
+          "name": "Home",
+          "url": "/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "Services",
+          "url": "/services/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Contact",
+          "url": "/#contact",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "list": [
+        {
+          "enable": true,
+          "name": "Technical support",
+          "url": "/services/technical-support/",
+          "weight": 0
+        },
+        {
+          "enable": true,
+          "name": "IT security",
+          "url": "/services/it-security/",
+          "weight": 1
+        },
+        {
+          "enable": true,
+          "name": "Networks",
+          "url": "/services/networks-connectivity/",
+          "weight": 2
+        },
+        {
+          "enable": true,
+          "name": "Backup and recovery",
+          "url": "/services/backup-recovery/",
+          "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "Custom software",
+          "url": "/services/custom-software/",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

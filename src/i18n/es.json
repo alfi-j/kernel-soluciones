@@ -1,0 +1,96 @@
+{
+  "common": {
+    "readMore": "Leer más",
+    "category": "Categoría",
+    "emailPlaceholder": "Correo electrónico",
+    "emailLabel": "Correo",
+    "subscribeSuccess": "¡Suscripción exitosa!",
+    "subscribeFail": "No se pudo suscribir.",
+    "subscribeError": "Ocurrió un error inesperado.",
+    "bannerPattern": "Patrón del banner",
+    "customerAvatar": "Avatar del cliente",
+    "decorativePattern": "Patrón decorativo",
+    "experience": "Experiencia",
+    "aboutUs": "Nosotros",
+    "experienceBadge": "Años de experiencia",
+    "paginationNext": "Siguiente",
+    "paginationPrevious": "Anterior",
+    "contactDropdownSearch404": "Sin resultados",
+    "404Heading": "404 - Página no encontrada",
+    "404Description": "Parece que te saliste del mapa. Volvamos al inicio.",
+    "404ButtonLabel": "Volver al inicio",
+    "send": "Enviar",
+    "share": "Compartir",
+    "projectDetails": "Detalles del servicio"
+  },
+  "navigation": {
+    "buttonLabel": "Pedir diagnóstico"
+  },
+  "contactInfo": {
+    "locationLabel": "Ubicación",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo"
+  },
+  "subscription": {
+    "title": "",
+    "description": ""
+  },
+  "integration": {
+    "relatedIntegrationSectionTitle": "También te puede **interesar**",
+    "backToIntegration": "Ver servicios"
+  },
+  "footerBlock": {
+    "description": "Kernel Soluciones brinda soporte técnico y seguridad informática a negocios y hogares en Ecuador: mantenimiento, redes, respaldo de datos y software a medida.",
+    "copyright": "Copyright © 2026 Kernel Soluciones. Todos los derechos reservados.",
+    "contactBlockLabel": "Contacto",
+    "aboutUsLabel": "Nosotros",
+    "quickLinksLabel": "Enlaces rápidos",
+    "officeLabel": "Oficina",
+    "socialLabel": "Redes",
+    "recentPostsLabel": "Servicios recientes"
+  },
+  "blog": {
+    "comments": "Comentarios",
+    "noComments": "Sin comentarios",
+    "previousPost": "Anterior",
+    "nextPost": "Siguiente"
+  },
+  "button": {
+    "readMore": "Leer más",
+    "viewProjects": "Ver servicios",
+    "view": "Ver",
+    "getAQuote": "Pedir cotización",
+    "discoverMore": "Descubrir más",
+    "findOutMore": "Saber más",
+    "showAll": "Ver todo"
+  },
+  "header": {
+    "announcement": "Soporte remoto y presencial en Santo Domingo y todo Ecuador. [Pide tu diagnóstico](/#contact)"
+  },
+  "social": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "widgets": {
+    "postSearchTitle": "Buscar",
+    "postSearchFormPlaceholder": "Buscar",
+    "categoriesTitle": "Categorías",
+    "recentPostsTitle": "Servicios recientes"
+  },
+  "aria": {
+    "toggleNav": "Abrir o cerrar navegación",
+    "backToTop": "Volver arriba",
+    "closeModal": "Cerrar",
+    "playVideo": "Reproducir video",
+    "search": "Buscar",
+    "prevSlide": "Anterior",
+    "nextSlide": "Siguiente",
+    "prevTestimonial": "Testimonio anterior",
+    "nextTestimonial": "Testimonio siguiente",
+    "languageMenu": "Idioma",
+    "pagination": "Paginación",
+    "socialLinks": "Redes sociales",
+    "aboutCompany": "Sobre la empresa"
+  }
+}

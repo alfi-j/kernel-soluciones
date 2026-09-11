@@ -1,0 +1,55 @@
+---
+import Base from "@/layouts/Base.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils";
+import { getEntryCTM, getCollectionCTM } from "@/lib/contentParser.astro";
+import ContactSection from "@/components/sections/ContactSection.astro";
+import PageHeader from "@/layouts/components/widgets/PageHeader.astro";
+import ServiceCard from "@/components/cards/ServiceCard.astro";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const services = await getEntryCTM("services", "-index", Astro.currentLocale);
+const list = await getCollectionCTM("services", Astro.currentLocale);
+
+const groups = new Map<string, typeof list>();
+for (const item of list) {
+  const key = item.data.categories?.[0] ?? "";
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key)!.push(item);
+}
+
+// Stable order across languages: by lowest weight inside each group
+const orderedGroups = [...groups].sort(
+  ([, a], [, b]) =>
+    Math.min(...a.map((i) => i.data.weight ?? Infinity)) -
+    Math.min(...b.map((i) => i.data.weight ?? Infinity)),
+);
+---
+
+<Base {...services.data}>
+  <PageHeader
+    title={services.data.title}
+    breadcrumbTitle={services?.data?.breadcrumbTitle}
+  />
+  <section>
+    <div class="container space-y-12 md:space-y-16">
+      {
+        orderedGroups.map(([category, items]) => (
+          <div>
+            {category && (
+              <h2 class="text-h3-sm md:text-h3 mb-6 font-bold">{category}</h2>
+            )}
+            <div class="divide-border-dark/15 group/list border-border-dark/15 divide-y border-y">
+              {items.map((item, index) => {
+                return <ServiceCard content={item} index={index} />;
+              })}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <ContactSection />
+</Base>
