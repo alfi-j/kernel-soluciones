@@ -5,7 +5,7 @@ Soporte técnico informático y seguridad informática en Ecuador. Mantenimiento
 - **Ubicación:** Santo Domingo de los Tsáchilas, Ecuador (cobertura remota y presencial en todo el país)
 - **Teléfono / WhatsApp:** +593 999 780 192
 - **Correo:** ajestrellar@outlook.com
-- **Sitio web:** https://kernel-soluciones.pages.dev
+- **Sitio web:** [Kernel Soluciones](https://alfi-j.github.io/kernel-soluciones/)
 - **Redes:** [Facebook](https://www.facebook.com/kernel.sol/) · [Instagram](https://www.instagram.com/kernel.sol/) · [X](https://x.com/ajestrellar)
 - **Idiomas del sitio:** español, inglés y francés
 
