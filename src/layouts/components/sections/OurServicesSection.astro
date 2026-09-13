@@ -5,10 +5,10 @@ import { getEntryCTM, getCollectionCTM } from "@/lib/contentParser.astro";
 import overrideObjects from "@/lib/utils/overrideObjects.ts";
 import type { ourServicesSectionSchema } from "@/sections.schema";
 import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
-import Icons from "@/helpers/Icons.astro";
 import Button from "../Button.astro";
 import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
 import ServiceCard from "@/components/cards/ServiceCard.astro";
+import SectionBadge from "../global/SectionBadge.astro";
 import SectionTitle from "../global/SectionTitle.astro";
 import VerticalLabel from "@/components/widgets/VerticalLabel.astro";
 
@@ -63,17 +63,7 @@ let servicesList = await getCollectionCTM(
       <div class="flex flex-col items-start gap-10 lg:flex-row lg:gap-25">
         {/* Left: badge + title */}
         <div>
-          {
-            badge && (
-              <div
-                class="mb-5 flex items-center gap-3 font-semibold uppercase"
-                data-aos="fade-up-sm"
-                data-aos-duration="600">
-                <Icons icon="Diamond" fill={"#000000"} />
-                {badge}
-              </div>
-            )
-          }
+          {badge && <SectionBadge title={badge} />}
           {title && <SectionTitle title={title} />}
         </div>
 
@@ -99,7 +89,7 @@ let servicesList = await getCollectionCTM(
 
       {
         servicesList && servicesList.length > 0 && (
-          <div class="divide-border-dark/15 border-border-dark/15 mt-15 mb-13 divide-y border-y md:mt-20 xl:mt-27.5 group/list">
+          <div class="divide-border-dark/15 border-border-dark/15 group/list mt-15 mb-13 divide-y border-y md:mt-20 xl:mt-27.5">
             {servicesList.map((service, index) => (
               <ServiceCard content={service} index={index} />
             ))}

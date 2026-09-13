@@ -1,5 +1,5 @@
 ---
-import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils";
+import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils";
 import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 import { markdownify, toSentenceCase } from "@/lib/utils/textConverter";
 
@@ -36,6 +36,16 @@ let {
   logoText,
   title,
 } = config.site;
+
+// Brand text next to the logo: "Kernel" + translated suffix
+// (es: "Soluciones", en/fr: "Solutions"). Falls back to config logoText.
+const t = await useTranslations(Astro.currentLocale as string);
+const brandName = t("brand.name");
+const brandSuffix = t("brand.suffix");
+const brandText =
+  brandName !== "Not Found" && brandSuffix !== "Not Found"
+    ? `${brandName} ${brandSuffix}`
+    : logoText;
 ---
 
 <a
@@ -58,15 +68,15 @@ let {
           }}
         />
 
-        {logoText && (
+        {brandText && (
           <span
             class={`logo-text ${variant === "blue" && "text-white"}`}
-            set:html={markdownify(logoText)}
+            set:html={markdownify(brandText)}
           />
         )}
       </>
-    ) : logoText ? (
-      logoText
+    ) : brandText ? (
+      brandText
     ) : (
       title
     )

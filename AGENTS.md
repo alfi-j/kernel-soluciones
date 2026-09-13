@@ -1,4 +1,4 @@
-# AGENTS.md — Lumio Lite (Astro 7 + Tailwind 4)
+# AGENTS.md — Kernel Soluciones (Astro 7 + Tailwind 4)
 
 Static multilingual marketing site. Node `>=22.12.0`. No monorepo, no CI, no project tests.
 

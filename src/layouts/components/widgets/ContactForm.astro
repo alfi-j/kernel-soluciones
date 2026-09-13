@@ -116,16 +116,27 @@ const messageContent = {
     messageInputs.find((input) => input.note === "deprecated")?.content || "",
 };
 
-const isFrench = Astro.currentLocale === "fr";
-const defaultPendingMessage = isFrench
-  ? "Envoi de votre message..."
-  : "Submitting your message...";
-const defaultSuccessMessage = messageContent.success || (isFrench
-  ? "Nous avons bien recu votre message. Nous vous repondrons des que possible."
-  : "We have received your message. We'll get back to you as soon as possible.");
-const defaultErrorMessage = messageContent.error || (isFrench
-  ? "Une erreur s'est produite. Veuillez reessayer."
-  : "Something went wrong. Please try again.");
+const locale = Astro.currentLocale;
+const defaultPendingMessage =
+  locale === "es"
+    ? "Enviando tu mensaje..."
+    : locale === "fr"
+      ? "Envoi de votre message..."
+      : "Submitting your message...";
+const defaultSuccessMessage =
+  messageContent.success ||
+  (locale === "es"
+    ? "Hemos recibido tu mensaje. Te responderemos lo antes posible."
+    : locale === "fr"
+      ? "Nous avons bien recu votre message. Nous vous repondrons des que possible."
+      : "We have received your message. We'll get back to you as soon as possible.");
+const defaultErrorMessage =
+  messageContent.error ||
+  (locale === "es"
+    ? "Algo salió mal. Inténtalo de nuevo."
+    : locale === "fr"
+      ? "Une erreur s'est produite. Veuillez reessayer."
+      : "Something went wrong. Please try again.");
 ---
 
 <form
@@ -182,7 +193,12 @@ const defaultErrorMessage = messageContent.error || (isFrench
               data-hs-select={getSelectConfig(input)}
               class="contact-form-native-select"
               {...(input.required && { required: true })}>
-              <option value="">Choose</option>
+              <option value="">
+                {withRequiredMark(
+                  input.placeholder || "Select an option",
+                  input.required,
+                )}
+              </option>
               {input.dropdown.items?.map((option: DropdownItem) => (
                 <option
                   {...(option.selected && { selected: true })}
@@ -591,12 +607,7 @@ const defaultErrorMessage = messageContent.error || (isFrench
 
           if (hasError || !formUtils?.isFormFilled(form)) return;
 
-          formUtils.setMessage(
-            "Submitting your message...",
-            "pending",
-            true,
-            form,
-          );
+          formUtils.setMessage("default", "pending", true, form);
 
           const submitBtn = document.getElementById(
             "contact-submit",
@@ -630,7 +641,7 @@ const defaultErrorMessage = messageContent.error || (isFrench
           } catch (error) {
             formUtils.setMessage(
               error +
-                "! Please use this mail - [lumio-astro-theme@gmail.com](mailto:lumio-astro-theme@gmail.com) to submit a ticket!",
+                "! Please use this mail - [ajestrellar@outlook.com](mailto:ajestrellar@outlook.com) to submit a ticket!",
               false,
               false,
               form,

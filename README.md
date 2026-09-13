@@ -1,140 +1,48 @@
-> ⭐️ Love this theme? Star it to support our work!
+# Kernel Soluciones
 
-# Lumio Lite
+Soporte técnico informático y seguridad informática en Ecuador. Mantenimiento, redes, respaldo de datos, software a medida y capacitación empresarial para que tu negocio nunca se detenga.
 
-**Lumio Lite** is a lightweight, free version of the premium [Lumio Astro Theme](https://getastrothemes.com/astro-themes/lumio/), designed for IT companies, digital agencies, and consulting firms.
+- **Ubicación:** Santo Domingo de los Tsáchilas, Ecuador (cobertura remota y presencial en todo el país)
+- **Teléfono / WhatsApp:** +593 999 780 192
+- **Correo:** ajestrellar@outlook.com
+- **Sitio web:** https://kernel-soluciones.pages.dev
+- **Redes:** [Facebook](https://www.facebook.com/kernel.sol/) · [Instagram](https://www.instagram.com/kernel.sol/) · [X](https://x.com/ajestrellar)
+- **Idiomas del sitio:** español, inglés y francés
 
-> ⚡ Built with Astro 6, Tailwind CSS 4, and Markdown — optimized for performance, SEO, and simplicity.
+## Servicios
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/getastrothemes/lumio-lite-astro) [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/getastrothemes/lumio-lite-astro) [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/getastrothemes/lumio-lite-astro?devcontainer_path=.devcontainer/devcontainer.json)
+### Soporte y mantenimiento
 
-![Lumio Lite Banner](/public/images/og-image.jpg)
+- **Soporte técnico informático** — Reparación de computadoras lentas, errores de software y fallas de red en oficina y campo. Diagnóstico claro con costo y tiempo por adelantado, soporte remoto y presencial, con seguimiento para que la falla no vuelva.
+- **Mantenimiento y optimización** — Limpieza física y lógica, ampliación de disco y memoria, y ajuste del sistema. Ideal para oficinas y puntos de venta intensivos, con checklist de 20 puntos y planes trimestrales que previenen fallas.
 
-## ✨ Features at a Glance
+### Ciberseguridad y protección
 
-- ✅ Localized homepage for English and French
-- ✅ Services list page and localized single service pages
-- ✅ Fully responsive and accessible
-- ✅ SEO-ready: meta tags, Open Graph, JSON-LD schema
-- ✅ Sticky header, localized navigation, and section anchor navigation
-- ✅ Easily deploy to Vercel, Netlify, or Cloudflare Pages
-- ✅ Edit homepage and services content using Markdown and MDX frontmatter
-- ✅ Contact form integration support for Formspree, Formsubmit, and Netlify
+- **Seguridad informática** — Protección contra virus, ransomware y phishing con antivirus gestionado, control de accesos por roles y respaldos verificados. Incluye capacitación al personal y reporte en lenguaje simple, sin tecnicismos ni soluciones sobredimensionadas.
 
-## 🔄 Lite vs. Pro — Feature Comparison
+### Infraestructura y datos
 
-| Feature                                                       | Lumio Lite | Lumio Pro 💎 |
-| ------------------------------------------------------------- | ---------- | ------------ |
-| Multiple Homepage Layouts                                     | ❌         | ✅           |
-| Premium Scroll & Hover Animations                             | ❌         | ✅           |
-| Creative UI Components (Tabs, Accordions, Testimonials, etc.) | ❌         | ✅           |
-| Pre-built Pages: About, FAQ, Services, Pricing, etc.          | ❌         | ✅           |
-| Blog System (with Markdown & Schema)                          | ❌         | ✅           |
-| Projects/Portfolio Section                                    | ❌         | ✅           |
-| Mega Menu Navigation                                          | ❌         | ✅           |
-| Mutiple Header Layouts                                        | ❌         | ✅           |
-| Mutiple Footer Layouts                                        | ❌         | ✅           |
-| Terms & Privacy Pages (Auto-generated)                        | ❌         | ✅           |
-| Markdown Content Support                                      | ✅         | ✅           |
-| Built-in Contact Form Support                                 | ✅         | ✅           |
-| Fully Multilingual (i18n) Support                             | ✅         | ✅           |
-| SEO Optimized (Meta + OpenGraph + JSON-LD)                    | ✅         | ✅           |
-| 100/100 Lighthouse Score                                      | ✅         | ✅           |
-| Deployment Ready (Vercel, Netlify, Cloudflare)                | ✅         | ✅           |
-| Accessible & Responsive Design                                | ✅         | ✅           |
-| Minimal Animations                                            | ✅         | ✅           |
+- **Redes y conectividad** — Diseño e instalación de redes WiFi y cableadas rápidas y estables para oficinas, locales y campo, incluso en zonas rurales. Configuración de routers, segmentación de invitados y operación, todo documentado.
+- **Respaldo y recuperación de datos** — Copias automáticas locales y externas con verificación periódica y prueba de restauración. Incluye inventario de respaldos y guía de emergencia escrita para tu empresa.
 
-> 🎯 **Need more pages and flexibility?**  
-> Upgrade to [Lumio Pro →](https://getastrothemes.com/astro-themes/lumio/) for the full business-ready toolkit.
+### Desarrollo de software
 
-## ⚡ Quick Start
+- **Software a medida** — Sistemas de inventario, CRM, POS/KDS, seguros y reportes, con facturación segura y control por roles. Levantamiento, desarrollo por etapas, capacitación y soporte post-lanzamiento.
 
-```bash
-git clone https://github.com/getastrothemes/lumio-lite-astro.git
-cd lumio-lite-astro
-npm install
-npm run dev
-```
+### Capacitaciones
 
-## 🚀 Project Structure
+- **Ofimática avanzada y herramientas en la nube** — Excel y Google Workspace: tablas dinámicas, reportes automáticos, Drive ordenado y plantillas de cotización e inventario. Taller práctico con casos reales, material editable y certificado.
+- **IA y productividad** — Uso productivo de la inteligencia artificial: plantillas por rol, manejo seguro de datos y automatización con validación humana. Taller con ejemplos de tu sector, guía interna y seguimiento.
+- **Ciberseguridad** — Talleres anti-phishing, gestión de contraseñas y protocolos de respuesta, con simulacro de phishing, manual interno y certificado por asistente.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Cómo trabajamos
 
-```text
-.
-├── .vscode/
-├── public/
-├── scripts/
-├── src/
-│ ├── assets/
-│ ├── config/
-│ ├── content/
-│ ├── i18n/
-│ ├── layouts/
-│ ├── lib/
-│ ├── pages/
-│ ├── styles/
-│ ├── types/
-│ ├── content.config.ts
-│ └── env.d.ts
-├── .editorconfig
-├── .gitignore
-├── .markdownlint.json
-├── .prettierrc
-├── astro.config.mjs
-├── netlify.toml
-├── vercel.json
-├── vercel.sh
-└── tsconfig.json
-```
+1. **Diagnóstico claro** — Escuchamos el síntoma, revisamos hardware, software y red en oficina o campo, e indicamos qué ocurre, cuánto cuesta y cuánto tarda.
+2. **Reparación y protección** — Reparamos, optimizamos y configuramos usuarios, respaldos y seguridad. Todo queda documentado y probado con el cliente.
+3. **Seguimiento y prevención** — Monitoreo, mantenimiento preventivo y capacitación para que el problema no vuelva. Soporte remoto y presencial.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Primera respuesta en menos de 60 minutos.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Contacto
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollectionCTM()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 🚀 One-Click Deployment
-
-Deploy the Lumio Lite theme instantly to your favorite platform:
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/getastrothemes/lumio-lite-astro)
-
-## 👀 Want to learn more?
-
-Full usage, customization, and deployment guide:
-
-[Theme Documentation](https://docs.getastrothemes.com/lumio/) · [Astro Documentation](https://docs.astro.build) · [Astro Discord server](https://astro.build/chat)
-
-## 📄 License
-
-Lumio Lite is free for personal and commercial use under the [Getastrothemes Free Theme License.](LICENSE.md)
-
-✅ Attribution appreciated but not required. You may optionally include a visible link to [getastrothemes.com](https://getastrothemes.com) in your site footer or credits section.
-
-## 💬 Feedback & Suggestions
-
-If you enjoy using Lumio Lite or have ideas to improve it:
-
-📣 [Give Feedback](https://getastrothemes.com/contact/)
-
-## 🛠 Credits
-
-Made with ❤️ by [Getastrothemes](https://getastrothemes.com/)
-
-Lumio Lite is inspired by the premium [Lumio Pro Theme](https://getastrothemes.com/astro-themes/lumio/)
+¿Tu equipo está lento, sin internet o en riesgo? Pide tu diagnóstico por WhatsApp al +593 999 780 192, por correo a ajestrellar@outlook.com o desde la sección de contacto del sitio.

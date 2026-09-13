@@ -1,8 +1,8 @@
 {
-  "name": "lumio-lite",
+  "name": "kernel-sol",
   "type": "module",
   "version": "1.0.0",
-  "author": "getastrothemes",
+  "author": "Kernel Soluciones",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "keywords": [
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/getastrothemes/lumio-lite-astro.git"
+    "url": "https://github.com/alfi-j/kernel-soluciones.git"
   },
   "scripts": {
     "dev": "npm run toml:watch -- --watch & astro dev",

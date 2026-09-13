@@ -1,6 +1,6 @@
 ---
 enable: true
-badge: "Nos services"
+badge: "// Nos services"
 title: "Support, sécurité et logiciels pour une activité sans arrêt."
 image: "/images/home-banner/banner-2.jpg"
 imageAlt: "Technicien Kernel Soluciones sur des ordinateurs"

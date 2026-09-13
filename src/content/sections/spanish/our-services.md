@@ -1,6 +1,6 @@
 ---
 enable: true
-badge: "Nuestros servicios"
+badge: "// Nuestros servicios"
 title: "Soporte, seguridad y software para que tu negocio no se detenga."
 image: "/images/home-banner/banner-2.jpg"
 imageAlt: "Técnico de Kernel Soluciones trabajando en equipos"

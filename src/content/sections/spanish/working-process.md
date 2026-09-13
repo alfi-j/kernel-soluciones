@@ -1,6 +1,6 @@
 ---
 enable: true
-badge: "// Cómo trabajo"
+badge: "// Cómo trabajamos"
 title: "De tu llamada a la solución, sin vueltas"
 image: "/images/service/working-process.png"
 list:

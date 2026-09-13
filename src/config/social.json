@@ -4,15 +4,15 @@
       "enable": true,
       "label": "Facebook",
       "lucideIcon": "facebook",
-      "url": "https://www.facebook.com",
+      "url": "https://www.facebook.com/kernel.sol/",
       "isForShare": true,
       "isForShareProject": true
     },
     {
       "enable": true,
-      "label": "Twitter",
+      "label": "X",
       "lucideIcon": "twitter-new",
-      "url": "https://www.x.com",
+      "url": "https://x.com/ajestrellar",
       "isForShare": true,
       "isForShareProject": true
     },
@@ -28,7 +28,7 @@
       "enable": true,
       "label": "Instagram",
       "lucideIcon": "instagram",
-      "url": "https://www.instagram.com",
+      "url": "https://www.instagram.com/kernel.sol/",
       "isForShare": false,
       "isForShareProject": true
     },

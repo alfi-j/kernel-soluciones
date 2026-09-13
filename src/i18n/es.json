@@ -26,6 +26,10 @@
   "navigation": {
     "buttonLabel": "Pedir diagnóstico"
   },
+  "brand": {
+    "name": "Kernel",
+    "suffix": "Soluciones"
+  },
   "contactInfo": {
     "locationLabel": "Ubicación",
     "phoneLabel": "Teléfono",

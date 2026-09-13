@@ -96,7 +96,7 @@
     enable               = true
     defaultLanguage      = "es"
     disableLanguages     = [] # List of languages to disable (eg: ["fr", "es"])
-    showDefaultLangInUrl = false # Show default language in URL (eg: https://getastrothemes.com/en/)
+    showDefaultLangInUrl = false # Show default language in URL (eg: https://kernel-soluciones.pages.dev/es/)
 
   # Navigation Button In Header
   [settings.navigationButton]
